@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class ElevatorTest {
+public class DummyTest {
     private Elevator elevator;
 
     @Test
