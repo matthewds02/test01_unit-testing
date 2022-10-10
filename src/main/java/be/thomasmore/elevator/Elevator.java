@@ -2,7 +2,7 @@ package be.thomasmore.elevator;
 
 public class Elevator {
 
-    public String scan(String name, int verdieping) {
+    public String scan(String name) {
         if (name == null) return "";
         if (name.length() == 0) return "";
         if (name.length() > 3) return "";
