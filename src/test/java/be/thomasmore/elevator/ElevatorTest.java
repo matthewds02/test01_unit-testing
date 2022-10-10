@@ -13,7 +13,11 @@ public class ElevatorTest {
         assertEquals("", result);
     }
 
-
+    @Test
+    public void noValidBadge() {
+        String result = elevator.scan(new String[]{}, 0);
+        assertEquals("", result);
+    }
 
     @Test
     public void randomBadge() {
