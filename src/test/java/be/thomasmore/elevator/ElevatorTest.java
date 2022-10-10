@@ -9,7 +9,15 @@ public class ElevatorTest {
 
     @Test
     public void noBadge() {
-        String result = elevator.scan(new String[]{});
+        String result = elevator.scan(null, 0);
         assertEquals("", result);
+    }
+
+
+
+    @Test
+    public void randomBadge() {
+        String result = elevator.scan(new String[]{"405"}, 0);
+        assertEquals("0 10", result);
     }
 }
