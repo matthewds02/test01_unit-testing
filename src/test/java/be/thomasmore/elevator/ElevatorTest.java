@@ -31,4 +31,11 @@ public class ElevatorTest {
         System.out.println(result);
         assertEquals("", result);
     }
+
+    @Test
+    public void BadgeStaff() {
+        String result = elevator.scan("S", 0);
+        System.out.println(result);
+        assertEquals("0 1 2 3 4 5 6 7 8 9 10", result);
+    }
 }
