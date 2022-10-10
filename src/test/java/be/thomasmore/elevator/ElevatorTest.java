@@ -42,4 +42,10 @@ public class ElevatorTest {
         String result = elevator.scan("505");
         assertEquals("0 5 10", result);
     }
+
+    @Test
+    public void badgeFloor0() {
+        String result = elevator.scan("005");
+        assertEquals("", result);
+    }
 }
