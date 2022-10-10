@@ -14,7 +14,11 @@ public class Elevator {
         }
         if (name.charAt(0) > '0' & name.charAt(0) <= '9') {
             String firstNumber = "" + name.charAt(0);
-            return "0 " + firstNumber + " 10";
+            String currentNumber = "" + currentLevel;
+            if (!firstNumber.equals(currentNumber)) {
+                return "0 " + firstNumber + " 10";
+            }
+            return "0 10";
         }
         return "";
     }

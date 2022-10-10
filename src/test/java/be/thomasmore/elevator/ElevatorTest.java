@@ -54,4 +54,10 @@ public class ElevatorTest {
         String result = elevator.scan("A", 1);
         assertEquals("", result);
     }
+
+    @Test
+    public void currentLevelSameAsLivingFloor() {
+        String result = elevator.scan("805", 8);
+        assertEquals("0 10", result);
+    }
 }
