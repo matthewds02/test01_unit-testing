@@ -1,18 +1,31 @@
 package be.thomasmore.elevator;
 
+import java.util.ArrayList;
+
 public class Elevator {
 
-    public String scan(String name) {
+    public String scan(String name, int currentLevel) {
         if (name == null) return "";
         if (name.length() == 0) return "";
         if (name.length() > 3) return "";
         if (name.charAt(0) == '0') return "";
         if (name.charAt(0) == 'S') {
-            return "0 1 2 3 4 5 6 7 8 9 10";
+            return "" + activeButtons(currentLevel);
         }
-        else {
+        if (name.charAt(0) > '0' & name.charAt(0) <= '9') {
             String firstNumber = "" + name.charAt(0);
             return "0 " + firstNumber + " 10";
         }
+        return "";
+    }
+    
+    public Object activeButtons(int currentLevel){
+        ArrayList<Integer> actieveKnoppenLift = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            if (currentLevel != i) {
+                actieveKnoppenLift.add(i);
+            }
+        }
+        return actieveKnoppenLift;
     }
 }
